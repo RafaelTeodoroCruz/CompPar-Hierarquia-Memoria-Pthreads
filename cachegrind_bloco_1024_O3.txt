@@ -1,0 +1,31 @@
+==13769== Cachegrind, a high-precision tracing profiler
+==13769== Copyright (C) 2002-2017, and GNU GPL'd, by Nicholas Nethercote et al.
+==13769== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==13769== Command: ./matmul_bloco_O3 1024 64
+==13769== 
+--13769-- warning: L3 cache found, using its data for the LL simulation.
+--13769-- warning: specified LL cache: line_size 64  assoc 1  total_size 335,544,320
+--13769-- warning: simulated LL cache: line_size 64  assoc 1  total_size 268,435,456
+Multiplicacao com blocagem
+N: 1024
+Tamanho do bloco: 64
+Tempo: 15.928033 s
+GFLOPS: 0.134824
+C[0][0]: 0.00
+C[N-1][N-1]: 913756563456.00
+==13769== 
+==13769== I refs:        4,541,467,985
+==13769== I1  misses:            1,517
+==13769== LLi misses:            1,493
+==13769== I1  miss rate:          0.00%
+==13769== LLi miss rate:          0.00%
+==13769== 
+==13769== D refs:        1,631,203,619  (1,092,993,412 rd   + 538,210,207 wr)
+==13769== D1  misses:      156,044,798  (  155,782,238 rd   +     262,560 wr)
+==13769== LLd misses:          394,689  (      132,176 rd   +     262,513 wr)
+==13769== D1  miss rate:           9.6% (         14.3%     +         0.0%  )
+==13769== LLd miss rate:           0.0% (          0.0%     +         0.0%  )
+==13769== 
+==13769== LL refs:         156,046,315  (  155,783,755 rd   +     262,560 wr)
+==13769== LL misses:           396,182  (      133,669 rd   +     262,513 wr)
+==13769== LL miss rate:            0.0% (          0.0%     +         0.0%  )

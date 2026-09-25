@@ -1,0 +1,31 @@
+==18211== Cachegrind, a high-precision tracing profiler
+==18211== Copyright (C) 2002-2017, and GNU GPL'd, by Nicholas Nethercote et al.
+==18211== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==18211== Command: ./matmul_bloco_O0 512 64
+==18211== 
+--18211-- warning: L3 cache found, using its data for the LL simulation.
+--18211-- warning: specified LL cache: line_size 64  assoc 1  total_size 335,544,320
+--18211-- warning: simulated LL cache: line_size 64  assoc 1  total_size 268,435,456
+Multiplicacao com blocagem
+N: 512
+Tamanho do bloco: 64
+Tempo: 19.016334 s
+GFLOPS: 0.014116
+C[0][0]: 0.00
+C[N-1][N-1]: 56953623552.00
+==18211== 
+==18211== I refs:        5,571,323,539
+==18211== I1  misses:            1,528
+==18211== LLi misses:            1,503
+==18211== I1  miss rate:          0.00%
+==18211== LLi miss rate:          0.00%
+==18211== 
+==18211== D refs:        2,993,324,473  (2,854,339,927 rd   + 138,984,546 wr)
+==18211== D1  misses:       19,531,539  (   19,465,583 rd   +      65,956 wr)
+==18211== LLd misses:           99,776  (       33,871 rd   +      65,905 wr)
+==18211== D1  miss rate:           0.7% (          0.7%     +         0.0%  )
+==18211== LLd miss rate:           0.0% (          0.0%     +         0.0%  )
+==18211== 
+==18211== LL refs:          19,533,067  (   19,467,111 rd   +      65,956 wr)
+==18211== LL misses:           101,279  (       35,374 rd   +      65,905 wr)
+==18211== LL miss rate:            0.0% (          0.0%     +         0.0%  )
